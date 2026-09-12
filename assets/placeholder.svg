@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8ddcf"/><stop offset="1" stop-color="#c9b39c"/></linearGradient>
+    <radialGradient id="sun"><stop stop-color="#d58b52" stop-opacity=".85"/><stop offset="1" stop-color="#d58b52" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#paper)"/>
+  <circle cx="590" cy="240" r="210" fill="url(#sun)"/>
+  <path d="M0 690 Q170 570 330 680 T800 650 V1000 H0Z" fill="#7f806e" opacity=".8"/>
+  <path d="M0 790 Q200 670 410 800 T800 760 V1000 H0Z" fill="#4e5547" opacity=".9"/>
+  <path d="M120 750 L225 610 L330 750Z" fill="#403c35" opacity=".8"/>
+  <path d="M160 735 V635 H275 V735" fill="#b28b67"/>
+  <text x="400" y="905" text-anchor="middle" fill="#443c34" font-family="Georgia,serif" font-size="28">YOUR ARTWORK HERE</text>
+  <text x="400" y="945" text-anchor="middle" fill="#665b4f" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">RAJKUMAR GUPTA · ART ARCHIVE</text>
+</svg>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The art archive of Rajkumar Gupta, retired art teacher and artist.">
+  <meta name="theme-color" content="#f5f0e8">
+  <title>Rajkumar Gupta — A Life in Art</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Rajkumar Gupta home">
+      <span class="brand-mark">RG</span>
+      <span><strong>Rajkumar Gupta</strong><small>Art Archive</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Artist · Teacher · Creator</p>
+        <h1>A life<br><em>in art.</em></h1>
+        <p class="hero-text">A personal collection of paintings, sketches and memories by Rajkumar Gupta, a retired art teacher who spent a lifetime sharing creativity with others.</p>
+        <a class="button" href="#gallery">Explore the gallery <span>↓</span></a>
+      </div>
+      <div class="hero-art">
+        <img src="assets/placeholder.svg" alt="Featured artwork placeholder — replace with a Rajkumar Gupta artwork">
+        <div class="art-caption"><span>Featured work</span><strong>Add Rajkumar's first artwork here</strong></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section-shell section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The collection</p>
+          <h2>Selected works</h2>
+        </div>
+        <p class="section-note">Each piece can be opened for a closer look.</p>
+      </div>
+      <div id="filters" class="filters" aria-label="Artwork filters"></div>
+      <div id="gallery-grid" class="gallery-grid"></div>
+    </section>
+
+    <section id="about" class="about section-shell section">
+      <div class="about-card">
+        <p class="eyebrow">About the artist</p>
+        <h2>More than an artist — a teacher.</h2>
+        <p>Rajkumar Gupta dedicated years to teaching art and encouraging students to observe, imagine and create. This small website is a living archive for the work he made along the way.</p>
+        <p class="quote">“Art is something we create, share and leave behind.”</p>
+      </div>
+    </section>
+
+    <section id="journey" class="section-shell section journey">
+      <div>
+        <p class="eyebrow">The journey</p>
+        <h2>A creative life,<br>one chapter at a time.</h2>
+      </div>
+      <div class="timeline">
+        <article><span>01</span><div><h3>Early years</h3><p>Add a short note about Rajkumar's early interest in drawing and painting.</p></div></article>
+        <article><span>02</span><div><h3>Teaching years</h3><p>Add schools, years of service, exhibitions or memorable classroom moments.</p></div></article>
+        <article><span>03</span><div><h3>Today</h3><p>Continue adding new work and memories to keep the archive alive.</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div><strong>Rajkumar Gupta</strong><span>© <span id="year"></span> Art Archive</span></div>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <dialog id="art-dialog" class="art-dialog" aria-label="Artwork viewer">
+    <button class="dialog-close" id="dialog-close" aria-label="Close artwork viewer">×</button>
+    <div class="dialog-image-wrap"><img id="dialog-image" src="" alt=""></div>
+    <div class="dialog-copy"><p id="dialog-category" class="eyebrow"></p><h2 id="dialog-title"></h2><p id="dialog-meta"></p><p id="dialog-description"></p></div>
+  </dialog>
+
+  <script src="artworks.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
