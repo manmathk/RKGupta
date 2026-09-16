@@ -3,20 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The art archive of Rajkumar Gupta, retired art teacher and artist.">
-  <meta name="theme-color" content="#f5f0e8">
+  <meta name="description" content="The art archive of Rajkumar Gupta — paintings, memories and a lifelong practice of teaching and creating art.">
+  <meta name="theme-color" content="#191714">
+  <meta property="og:title" content="Rajkumar Gupta — A Life in Art">
+  <meta property="og:description" content="A visual archive of paintings and memories from the life and work of artist and teacher Rajkumar Gupta.">
+  <meta property="og:type" content="website">
   <title>Rajkumar Gupta — A Life in Art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header section-shell">
     <a class="brand" href="#top" aria-label="Rajkumar Gupta home">
       <span class="brand-mark">RG</span>
-      <span><strong>Rajkumar Gupta</strong><small>Art Archive</small></span>
+      <span class="brand-copy"><strong>Rajkumar Gupta</strong><small>Artist · Teacher</small></span>
     </a>
     <nav aria-label="Main navigation">
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
+      <a href="#gallery">Works</a>
+      <a href="#about">Story</a>
       <a href="#journey">Journey</a>
     </nav>
   </header>
@@ -24,60 +32,85 @@
   <main id="top">
     <section class="hero section-shell">
       <div class="hero-copy">
-        <p class="eyebrow">Artist · Teacher · Creator</p>
-        <h1>A life<br><em>in art.</em></h1>
-        <p class="hero-text">A personal collection of paintings, sketches and memories by Rajkumar Gupta, a retired art teacher who spent a lifetime sharing creativity with others.</p>
-        <a class="button" href="#gallery">Explore the gallery <span>↓</span></a>
+        <p class="eyebrow">A personal art archive</p>
+        <h1>Where a life<br><em>becomes art.</em></h1>
+        <p class="hero-text">A quiet digital home for the paintings and creative legacy of Rajkumar Gupta — an art teacher who spent a lifetime helping people look more closely, imagine more freely and create with feeling.</p>
+        <div class="hero-actions">
+          <a class="button" href="#gallery">Enter the collection <span>↘</span></a>
+          <span class="hero-note">Seven works preserved in this archive</span>
+        </div>
       </div>
       <div class="hero-art">
-        <img src="assets/placeholder.svg" alt="Featured artwork placeholder — replace with a Rajkumar Gupta artwork">
-        <div class="art-caption"><span>Featured work</span><strong>Add Rajkumar's first artwork here</strong></div>
+        <div class="hero-frame">
+          <img src="assets/IMG-20260911-WA0005.jpg" alt="Untitled painting by Rajkumar Gupta" fetchpriority="high">
+        </div>
+        <div class="art-caption">
+          <span>Archive · Untitled Work 01</span>
+          <strong>From the personal collection</strong>
+        </div>
       </div>
     </section>
 
-    <section id="gallery" class="section-shell section">
+    <div class="collection-ribbon" aria-hidden="true">
+      <span>Observe</span><i>✦</i><span>Remember</span><i>✦</i><span>Create</span><i>✦</i><span>Share</span>
+    </div>
+
+    <section id="gallery" class="section-shell section gallery-section">
       <div class="section-heading">
         <div>
           <p class="eyebrow">The collection</p>
           <h2>Selected works</h2>
         </div>
-        <p class="section-note">Each piece can be opened for a closer look.</p>
+        <div class="section-aside">
+          <span id="art-count">07 works</span>
+          <p>Original paintings from the archive. Open any work for a closer view and its accompanying note.</p>
+        </div>
       </div>
       <div id="filters" class="filters" aria-label="Artwork filters"></div>
       <div id="gallery-grid" class="gallery-grid"></div>
     </section>
 
     <section id="about" class="about section-shell section">
+      <div class="about-visual" aria-hidden="true"><span>RG</span></div>
       <div class="about-card">
         <p class="eyebrow">About the artist</p>
-        <h2>More than an artist — a teacher.</h2>
-        <p>Rajkumar Gupta dedicated years to teaching art and encouraging students to observe, imagine and create. This small website is a living archive for the work he made along the way.</p>
-        <p class="quote">“Art is something we create, share and leave behind.”</p>
+        <h2>More than an artist —<br><em>a teacher.</em></h2>
+        <p>Rajkumar Gupta’s creative life belongs not only to finished canvases, but also to the act of teaching: observing carefully, experimenting patiently and encouraging others to make something of their own.</p>
+        <p class="quote">“Art is not only what we make. It is what we learn to notice.”</p>
       </div>
     </section>
 
     <section id="journey" class="section-shell section journey">
-      <div>
+      <div class="journey-intro">
         <p class="eyebrow">The journey</p>
         <h2>A creative life,<br>one chapter at a time.</h2>
+        <p>As this archive grows, stories, dates and memories can be added alongside the paintings.</p>
       </div>
       <div class="timeline">
-        <article><span>01</span><div><h3>Early years</h3><p>Add a short note about Rajkumar's early interest in drawing and painting.</p></div></article>
-        <article><span>02</span><div><h3>Teaching years</h3><p>Add schools, years of service, exhibitions or memorable classroom moments.</p></div></article>
-        <article><span>03</span><div><h3>Today</h3><p>Continue adding new work and memories to keep the archive alive.</p></div></article>
+        <article><span>01</span><div><h3>Early years</h3><p>The beginning of a lifelong relationship with drawing, colour and observation.</p></div></article>
+        <article><span>02</span><div><h3>Teaching years</h3><p>A career shaped by classrooms, students and the belief that creativity can be taught through curiosity.</p></div></article>
+        <article><span>03</span><div><h3>The archive</h3><p>Paintings and memories gathered here so the work can keep telling its story.</p></div></article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer section-shell">
-    <div><strong>Rajkumar Gupta</strong><span>© <span id="year"></span> Art Archive</span></div>
+    <div><strong>Rajkumar Gupta</strong><span>© <span id="year"></span> · Art Archive</span></div>
     <a href="#top">Back to top ↑</a>
   </footer>
 
   <dialog id="art-dialog" class="art-dialog" aria-label="Artwork viewer">
     <button class="dialog-close" id="dialog-close" aria-label="Close artwork viewer">×</button>
-    <div class="dialog-image-wrap"><img id="dialog-image" src="" alt=""></div>
-    <div class="dialog-copy"><p id="dialog-category" class="eyebrow"></p><h2 id="dialog-title"></h2><p id="dialog-meta"></p><p id="dialog-description"></p></div>
+    <div class="dialog-layout">
+      <div class="dialog-image-wrap"><img id="dialog-image" src="" alt=""></div>
+      <div class="dialog-copy">
+        <p id="dialog-category" class="eyebrow"></p>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-meta" class="dialog-meta"></p>
+        <div class="dialog-divider"></div>
+        <p id="dialog-description"></p>
+      </div>
+    </div>
   </dialog>
 
   <script src="artworks.js"></script>
