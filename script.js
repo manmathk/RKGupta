@@ -6,6 +6,7 @@ const dialogTitle = document.getElementById('dialog-title');
 const dialogMeta = document.getElementById('dialog-meta');
 const dialogDescription = document.getElementById('dialog-description');
 const dialogCategory = document.getElementById('dialog-category');
+const artCount = document.getElementById('art-count');
 
 let activeFilter = 'All';
 
@@ -15,8 +16,11 @@ function categories() {
 
 function renderFilters() {
   filters.innerHTML = categories().map(category => `
-    <button class="filter ${category === activeFilter ? 'active' : ''}" data-filter="${category}">${category}</button>
+    <button class="filter ${category === activeFilter ? 'active' : ''}" data-filter="${escapeHtml(category)}" type="button">
+      ${escapeHtml(category)}
+    </button>
   `).join('');
+
   filters.querySelectorAll('.filter').forEach(button => {
     button.addEventListener('click', () => {
       activeFilter = button.dataset.filter;
@@ -31,17 +35,19 @@ function renderGallery() {
     ? ARTWORKS
     : ARTWORKS.filter(art => art.category === activeFilter);
 
+  artCount.textContent = `${String(visible.length).padStart(2, '0')} ${visible.length === 1 ? 'work' : 'works'}`;
+
   if (!visible.length) {
     grid.innerHTML = '<div class="empty">No artwork in this collection yet.</div>';
     return;
   }
 
-  grid.innerHTML = visible.map((art, index) => `
+  grid.innerHTML = visible.map(art => `
     <article class="art-card" tabindex="0" data-index="${ARTWORKS.indexOf(art)}" aria-label="View ${escapeHtml(art.title)}">
       <img loading="lazy" src="${art.image}" alt="${escapeHtml(art.title)} by Rajkumar Gupta">
       <div class="art-card-body">
         <h3>${escapeHtml(art.title)}</h3>
-        <p>${escapeHtml(art.medium || '')}${art.year && art.year !== '—' ? ' · ' + escapeHtml(art.year) : ''}</p>
+        <p>${escapeHtml(art.medium || '')}${art.year ? ' · ' + escapeHtml(art.year) : ''}</p>
       </div>
     </article>
   `).join('');
@@ -61,19 +67,29 @@ function renderGallery() {
 function openArtwork(index) {
   const art = ARTWORKS[index];
   if (!art) return;
+
   dialogImage.src = art.image;
   dialogImage.alt = `${art.title} by Rajkumar Gupta`;
   dialogTitle.textContent = art.title;
   dialogCategory.textContent = art.category || 'Artwork';
-  dialogMeta.textContent = [art.medium, art.year !== '—' ? art.year : ''].filter(Boolean).join(' · ');
+  dialogMeta.textContent = [art.medium, art.year].filter(Boolean).join(' · ');
   dialogDescription.textContent = art.description || '';
-  dialog.showModal();
+
+  if (typeof dialog.showModal === 'function') {
+    dialog.showModal();
+  } else {
+    dialog.setAttribute('open', '');
+  }
 }
 
 document.getElementById('dialog-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => {
   if (event.target === dialog) dialog.close();
 });
+dialog.addEventListener('keydown', event => {
+  if (event.key === 'Escape') dialog.close();
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 function escapeHtml(value) {
